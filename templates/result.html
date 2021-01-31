@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			News Classification
+		</div>
+		<h2>Natural Language Processing</h2>
+		
+	</div>
+	</header>
+	<p style="color:Red;font-size:20;text-align: center;"><b>categorize the news content</b></p>
+	<div class="results">
+
+
+		
+	{% if prediction == 0%}
+	<h2 style="color:green;">Politics News</h2>
+	{% elif prediction == 1%}
+	<h2 style="color:blue;">SmartPhone Technology News</h2>
+        {% elif prediction == 2%}
+	<h2 style="color:orange;">Filmy Industry News</h2>
+        {% elif prediction == 3%}
+	<h2 style="color:purple;">Share Market News</h2> 
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
